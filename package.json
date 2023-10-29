@@ -1,0 +1,26 @@
+{
+  "name": "pulldown-cmark",
+  "version": "0.1.5",
+  "author": "Georges KABBOUCHI <georges.kabbouchi@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "execa": "^8.0.1",
+    "fs": "^0.0.1-security",
+    "rimraf": "^5.0.5",
+    "tsx": "^3.14.0"
+  }
+}
