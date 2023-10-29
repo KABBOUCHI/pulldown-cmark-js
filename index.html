@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>pulldown-cmark</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module">
-      import { pulldown_cmark } from "./dist/index.js";
+      import init, { parse } from "./dist/init.js";
 
-      document.getElementById("app").innerHTML = pulldown_cmark(
+      await init();
+
+      document.getElementById("app").innerHTML = parse(
         "# Hello, world!\n\nThis is a paragraph."
       );
     </script>
